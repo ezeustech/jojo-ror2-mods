@@ -1,0 +1,10 @@
+{
+  "name": "DIO_EyesOfHeaven",
+  "version_number": "3.6.5",
+  "website_url": "",
+  "description": "DIO as a new survivor with Shadow DIO and Heaven skins, controller extra moves, English captions, time stop, knives and Road Roller. Windows development build; co-op fixes require live testing.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.2122",
+    "RiskofThunder-R2API_Networking-1.0.4"
+  ]
+}

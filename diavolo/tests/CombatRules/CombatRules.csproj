@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../CombatRulesTests.cs" Link="CombatRulesTests.cs" />
+    <Compile Include="../../src/CombatRules.cs" Link="CombatRules.cs" />
+    <Compile Include="../../src/UltimateAimRules.cs" Link="UltimateAimRules.cs" />
+    <Compile Include="../../src/TemporalCombatWindow.cs" Link="TemporalCombatWindow.cs" />
+  </ItemGroup>
+</Project>

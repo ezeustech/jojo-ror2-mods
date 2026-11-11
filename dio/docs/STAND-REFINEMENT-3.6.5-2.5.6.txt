@@ -1,0 +1,36 @@
+Stand refinement - DIO 3.6.5 / Diavolo 2.5.6
+
+Both five-hit combos keep their damage and order. Target selection now reaches
+25 metres, with the existing 25-degree acquisition cone and world obstruction
+checks. A valid recent target stays selected within a 33-degree retention cone.
+
+Travel accelerates at 100 metres/second squared to at most 34 metres/second,
+then eases into the target. It is independent of attack speed. A shared attack
+clock holds the windup at an anticipation pose until the stand arrives. An
+obstructed approach times out after 1.5 seconds of held windup without a hit.
+
+Combo transitions retain the stand position and approach side. A 180ms grace
+period permits the next punch before the return begins. Return movement stays
+visible until it reaches the owner instead of disappearing on a fixed timer.
+
+DIO gets longer follow-through before chaining and longer pose blends. His
+first two targeted hits now use the contact windows of the actual World clips
+(3 and 4), rather than the player's clips (1 and 2). The rendered stand pose
+uses the same clock as its hit window. Targeted punches do not use the local
+authority-only hit-stop that put remote animation timing ahead of the owner.
+
+Diavolo's first three hits, execution and slam share arrival-aware timing.
+Early punches are less abrupt; attack-speed scaling is square-root based and
+capped at 2x animation speed. Execution arm posing waits until arrival, and its
+contact frame matches the damage time. Move audio waits for arrival too.
+
+King Crimson's summon and stand-jump WAVs previously matched DIO's custom
+The World summon byte for byte. Both now use the locally extracted ASBR
+S_std_appear cue (battle bank, entry 29), with the existing EQ/level matching.
+This is the game's generic stand-appearance cue, not an anime-specific clip.
+DIO's audio and all other Diavolo WAVs remain unchanged.
+
+Validation: production-controller/clock/pose regression checks; both DLLs built
+against installed game libraries; audio PCM/provenance/levels checked; release
+and transfer files hash checked. Actual Unity rendering, Thor feel and live
+multiplayer still require gameplay testing.

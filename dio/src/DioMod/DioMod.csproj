@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>EyesOfHeavenDio</AssemblyName>
+    <Version>3.7.0</Version>
+    <BepInExCoreDir Condition="'$(BepInExCoreDir)' == ''">..\..\third_party\thunderstore\bepinex-5.4.2122\BepInEx\core</BepInExCoreDir>
+    <R2ApiNetworkingPath Condition="'$(R2ApiNetworkingPath)' == ''">..\..\third_party\r2api\R2API.Networking.dll</R2ApiNetworkingPath>
+    <GameDir Condition="'$(GameDir)' == ''">$(ROR2_GAME_DIR)</GameDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony"><HintPath>$(BepInExCoreDir)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="R2API.Networking"><HintPath>$(R2ApiNetworkingPath)</HintPath><Private>false</Private></Reference>
+    <Reference Include="$(GameDir)\Risk of Rain 2_Data\Managed\*.dll" Exclude="$(GameDir)\Risk of Rain 2_Data\Managed\System*.dll;$(GameDir)\Risk of Rain 2_Data\Managed\mscorlib.dll;$(GameDir)\Risk of Rain 2_Data\Managed\netstandard.dll;$(GameDir)\Risk of Rain 2_Data\Managed\Microsoft*.dll"><Private>false</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MonoMod.RuntimeDetour"><HintPath>$(BepInExCoreDir)\MonoMod.RuntimeDetour.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

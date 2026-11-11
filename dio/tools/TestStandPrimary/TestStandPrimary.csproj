@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/DioMod/StandPrimaryController.cs" Link="StandPrimaryController.cs" />
+    <Compile Include="../../src/DioMod/StandPrimaryRules.cs" Link="StandPrimaryRules.cs" />
+    <Compile Include="../../../diavolo/src/ComboSequence.cs" Link="ComboSequence.cs" />
+    <Compile Include="../../src/DioMod/DioPoseBlend.cs" Link="DioPoseBlend.cs" />
+    <Compile Include="../../../diavolo/src/PoseTransition.cs" Link="PoseTransition.cs" />
+  </ItemGroup>
+</Project>
